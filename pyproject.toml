@@ -35,31 +35,9 @@ dependencies = [
   "packaging>=23.2",
   "tomlkit>=0.12.1",
 ]
-optional-dependencies.docs = [
-  "furo>=2023.9.10",
-  "sphinx>=7.2.6",
-  "sphinx-argparse-cli>=1.11.1",
-  "sphinx-autodoc-typehints>=1.24",
-  "sphinx-copybutton>=0.5.2",
-]
 optional-dependencies.test = [
   "covdefaults>=2.3",
   "pytest>=7.4.2",
   "pytest-cov>=4.1",
   "pytest-mock>=3.11.1",
 ]
-urls."Bug Tracker" = "https://github.com/tox-dev/pyproject-fmt/issues"
-urls."Changelog" = "https://github.com/tox-dev/pyproject-fmt/releases"
-urls.Documentation = "https://github.com/tox-dev/pyproject-fmt/"
-urls."Source Code" = "https://github.com/tox-dev/pyproject-fmt"
-scripts.pyproject-fmt = "pyproject_fmt.__main__:run"
-
-[tool.hatch]
-build.dev-mode-dirs = ["src"]
-build.hooks.vcs.version-file = "src/pyproject_fmt/_version.py"
-build.targets.sdist.include = ["/src", "/tests","tox.ini"]
-version.source = "vcs"
-
-[tool.mypy]
-show_error_codes = true
-strict = true
